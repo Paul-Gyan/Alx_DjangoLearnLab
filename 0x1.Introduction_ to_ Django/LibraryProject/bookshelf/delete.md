@@ -1,8 +1,9 @@
 **Delete the instance of the book**
 
 from bookshelf.model import Book
+
 book = Book.objects.get(title="Nineteen Eighty-Four)
 book.delete()
-print(Book.object.all())
+print(Book.objects.all())
 
 Expected output[]
