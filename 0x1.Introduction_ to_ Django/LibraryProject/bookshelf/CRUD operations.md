@@ -13,6 +13,8 @@ from bookshelf.model import Book
 book = Book.object.get(title="1984")
 print(book.title,book.autjor,book.publish_year)
 
+Expected output: 1984 George Orwell 1949
+
 **Update the title of the created book**
 from bookshelf.model import Book
 
@@ -20,6 +22,8 @@ book = Book.object.get(title="1984")
 book.title = "Nineteen Eighty-Four"
 book.save()
 print(book.title)
+
+Expected output: Nineteen Eighty-Four
 
 **Delete the instance of the book**
 
