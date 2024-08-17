@@ -46,7 +46,7 @@ class Book(models.Model):
     publication = models.CharField(max_length=100)
 
     class Meta:
-        Permission = (
+        Permissions = (
             ('is Admin', 'Is Admin'),
             ('can_add_book', 'Can Add Book'),
             ('can_delete_book', 'Can Delete Book'),
