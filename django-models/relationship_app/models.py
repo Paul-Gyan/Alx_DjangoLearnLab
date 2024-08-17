@@ -43,11 +43,11 @@ def create_user_profile(sender, instance, created, **kwargs):
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
-    publication = models.CharField(max_length=100)
+    publication_date = models.DateField()
 
     class Meta:
-        Permissions = (
-            ('is Admin', 'Is Admin'),
+        permissions = (
+            ('is admin', 'Is Admin'),
             ('can_add_book', 'Can Add Book'),
             ('can_delete_book', 'Can Delete Book'),
             ('can_change_book', 'Can Change Book'),
