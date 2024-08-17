@@ -6,4 +6,6 @@ def member_view(request):
 def is_member(user):
     return user.userprofile.role == 'Member'
 
+member_view = user_passes_test(is_member)(member_view)
+
 
