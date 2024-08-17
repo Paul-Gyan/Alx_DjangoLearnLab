@@ -12,13 +12,15 @@ for book in books_by_author:
 
 library_name = "Wassa Library"
 library = Library.objects.get(name=library_name)
-books_by_library = Book.objects.filter(library=library)
+books_in_library = library.bokks.all()
 print('books by Wassa Library:')
 for book in books_by_library:
     print(book.title)
 
-librarian = get_librarian_for_library(library_name)
-print('Librarian for', library_name, ':', librarian)
+library = Library.objects.get(name='New York Public Library')
+librarian = Librarian.objects.get(library=library)
+print("\nLibrarian for New York Public Library:")
+print(librarian.name)
 
 
 
