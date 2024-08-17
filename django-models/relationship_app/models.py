@@ -52,7 +52,7 @@ class Book(models.Model):
             ('can_delete_book', 'Can Delete Book'),
             ('can_change_book', 'Can Change Book'),
         )
-class Userprofile(models.Model):
+class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     role = models.CharField(max_length=50, choices=[('Admin', 'Admin'), ('Librarian', 'Librarian'), ('Member', 'Member')])
 
