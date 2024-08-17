@@ -74,3 +74,5 @@ def delete_book(request, pk):
         # Delete book logic here
         return redirect('book_list')
     return render(request, 'relationship_app/delete_book.html', {'book': book})
+    
+
