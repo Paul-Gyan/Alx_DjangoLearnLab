@@ -3,7 +3,7 @@ from .models import Book
 
 def list_book(request):
     books = Book.objects.all()
-    return render(request, 'list_book.html', {'books': books})
+    return render(request, 'list_books.html', {'books': books})
     
 
 from django.views.generic import DetailView
