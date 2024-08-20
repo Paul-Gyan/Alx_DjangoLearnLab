@@ -76,3 +76,10 @@ def delete_book(request, pk):
     return render(request, 'relationship_app/delete_book.html', {'book': book})
     
 
+def is_librarian(user):
+    return user.is_authenticated and user.userprofile.role == 'Librarian'
+
+@user_passes_test(is_librarian)
+def librarian_view(request):
+    return render(request, 'relationship_app/librarian_view.html')
+
