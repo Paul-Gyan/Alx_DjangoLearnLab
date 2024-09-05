@@ -5,7 +5,7 @@ from datetime import datetime
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = ['title', 'author', 'publication_year']
 
 class AuthorSerializer(serializers.ModelSerializer):
     """
@@ -17,7 +17,7 @@ class AuthorSerializer(serializers.ModelSerializer):
 
     class Meta:
        model = Author
-       fields = 'id', 'name', 'books'
+       fields =  ['name', 'books']
 
 class BookSerializer(serializers.ModelSerializer):
     """
